@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*디자인 시작 전에 모든 화면에 적용할 디자인은 *로 지정한다.*/
+        * { margin: 10px; }
+        b { color: red; }
+        ul, li {list-style: none;}
+
+        div p {color: rebeccapurple;}
+        section > p {color: palegreen;}
+    </style>
+
+</head>
+<body>
+    <!-- 직속 자식만 선택하고자 할 때는 '부모tag' > 자식tag' -->
+    <section>
+        <p>자식선택자</p>
+        <p>자식선택자</p>
+        <ul>
+            <li><p>자식선택자</p></li>
+            <li><p>자식선택자</p></li>
+        </ul>
+    </section>
+    <hr/>
+
+    <!-- 해당 태그를 선택하고자 할때는 'tag' -->
+    <b>태그선택자</b>
+    <b>태그선택자</b>
+    <hr/>
+
+    <!-- 두 개 이상의 태그를 선택할 때는 'tag, tag , ..' -->
+    <ul>
+        <li>다중선택자</li>
+        <li>다중선택자</li>
+    </ul>
+
+    <!-- 특정 태그 하위에 있는 태그를 선택하고자 할 때는 'tag tag' -->
+    <div>
+        <p>하위선택자</p>
+        <p>하위선택자</p>
+        <ul>
+            <li><p>하위선택자</p></li>
+            <li><p>하위선택자</p></li>
+        </ul>
+    </div>
+</body>
+</html>
