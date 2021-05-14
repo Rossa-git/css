@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(img/bg_grid.jpg);
+        }
+        p {
+            background-color: palevioletred;
+            width: 600px;
+            height: 300px;
+            border: 1px solid #777;
+
+            /* 4면이 전부 적용된다 */
+            /* padding: 50px; */
+
+            /* 위, 오른쪽, 아래, 왼쪽 (국룰 12시부터 시계방향) */
+            /* padding: 10px 20px 30px 40px; */
+
+            /* 위아래, 좌우 */
+            /* padding: 10px 20px; */
+
+            /* 따로따로 지정 가능 */
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        패딩이란 무엇인가, <br/>
+        윤곽(border) 기준으로 안쪽 여백입니다. 패딩은박스의 크기에 포함이 되고, 겹치지 않는다.<br/>
+        width(600px) + padding(10px + 10px) + border(1px + 1px)
+    </p>
+</body>
+</html>
