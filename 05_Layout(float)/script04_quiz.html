@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .wrap {
+            border: 1px solid #777;
+            width: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .wrap > div {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+        }
+        
+        .inner {
+            border: 1px solid #777;
+        }
+
+        .content {
+            border: 1px solid #777;
+            padding-bottom: 20px;
+        }
+
+        .priceBox {
+            overflow: hidden;
+            border: 1px solid #777;
+        }
+        .priceBox > .lable {
+            float: left;
+        }
+        .priceBox > .price {
+            float: right;
+        }
+
+        .btnBox {
+            overflow: hidden;
+        }
+        .btnBox > div {
+            border: 1px solid #777;
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h2>과제2</h2>
+    <div class="wrap"> <!-- 바깥 상자 -->
+        <div class="imgBox"> <!-- 이미지 상자 -->
+            사진
+        </div>
+        <div class="inner"> <!-- 내용상자 -->
+            <div class="content"> <!-- 제목/내용 -->
+                제목 : 패딩바텀 50px<br/>
+                내용 : gg
+            </div>
+            <div class="priceBox"> <!-- 가격란 -->
+                <div class="lable"> <!-- 레이블 -->
+                    가격
+                </div>
+                <div class="price"> <!-- 금액 -->
+                    10000원
+                </div>
+            </div>
+            <div class="btnBox"> <!-- 버튼 -->
+                <div>
+                    장바구니
+                </div>
+                <div>
+                    구매하기
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
