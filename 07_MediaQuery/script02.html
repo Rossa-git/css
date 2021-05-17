@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체화면에서 상자 6, 태블릿화면에서 상자 4, 휴대폰 화면에서 상자 2 */
+        /* 반응형에서는 크기 값의 단위을 반드시 %로 넣어준다 */
+        .box {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .inner {
+            border: 1px solid #777;
+            box-sizing: border-box;
+        }
+        @media(min-width: 1300px) {
+            .inner {
+                width: 16.6666%;
+                float: left;
+            }
+        }
+
+        @media(max-width: 1299px) and (min-width: 768px) { /* 태블릿에서 볼 화면 */
+            .inner {
+                width: 25%;
+                float: left;
+            }
+        }
+
+        @media(max-width: 767px) { /* 휴대폰에서 볼 화면 */
+            .inner{ 
+                width: 50%;
+                float: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>미디어쿼리를 이용한 그리드</h2>
+    <div class="box">
+        <div class="inner">박스</div>
+        <div class="inner">박스</div>
+        <div class="inner">박스</div>
+        <div class="inner">박스</div>
+        <div class="inner">박스</div>
+        <div class="inner">박스</div>
+    </div>
+</body>
+</html>
