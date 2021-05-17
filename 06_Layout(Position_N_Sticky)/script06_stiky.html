@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        ul, li { list-style: none; }
+        body { height: 1000px;}
+
+        header { 
+            position: fixed; /* 스크롤에 고정 */
+            width: 100%;
+            left: 0px;
+            top: 0px;
+
+            /* 포지션이 겹치는 경우 z-index 값으로 z축의 위치를 결정 */
+            z-index: 50; /* 숫자가 커질 수록 가장 위에 표시된다 */
+        }
+        section {
+            margin-top: 160px;
+        }
+        .logo { 
+            text-align: center; 
+            background-color: #fff;
+        }
+        .menu {
+            background-color: #000;
+            text-align: center;
+        }
+        .menu > li { 
+            display: inline-block;}
+        .menu > li > a {
+            display: block;
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+        }
+        .menu > li > a:hover {
+            background-color: #777;
+        }
+        /* 
+            sticky - 설정된 영역에 닿으면 fixed로 동작
+            
+            규칙1. top, bottom, left, right 중 한가지 옵션이 반드시 존재
+            규칙2. 어떤 부모요소든 overflow: hidden이 있으면 동작하지 않는다.
+            규칙3. top속성에는 스크롤이 이동됐을 때 fixed되는 지점을 기록한다 (헤더가 고정이라면 헤더의 높이 만큼)
+         */
+        .inner1 { background-color: pink; height: 500px;}
+        .inner2 { 
+            background-color: palegreen;
+
+            position: sticky;
+            top: 160px;
+            z-index: 100;
+        }
+        .inner3 { background-color: skyblue; height: 1500px;}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo"><!-- 이미지영역 -->
+            <img src="img/bgimg.png">
+        </div>
+        <nav><!-- 메뉴영역 -->
+            <ul class="menu">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="inner1">내용</div>
+        <div class="inner2">스티키</div>
+        <div class="inner3">내용</div>
+    </section>
+</body>
+</html>

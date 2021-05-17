@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid #777;
+            position: relative;
+            padding: 10px;
+        }
+        .wrap-img {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        .wrap-img img {
+            width: 50px;
+        }
+        .wrap-text textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            resize: vertical; /* 사용자가 textarea 크기를 바꿀 수 있는 건 세로 크기만 가능하게 */
+        }
+
+        .wrap-text, .wrap-btn {
+            padding-left: 60px;
+        }
+        .wrap-btn { overflow: hidden; }
+        .left { float: left; }
+        .right { float: right; }
+        .left > input {
+            display: block;
+            width: 100px;}
+
+        /* -------------------------- */
+
+        .title {
+            font-weight: bold;
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap-img"> <!-- 이미지 영역 -->
+            <img src="img/bgimg.png">
+        </div>
+        <div class="wrap-text"> <!-- 텍스트 영역 -->
+            <textarea>....</textarea>
+        </div>
+        <div class="wrap-btn"> <!-- 버튼 영역 -->
+            <div class="left">
+                <input type="text">
+                <input type="text" style="margin-top: 3px;">
+            </div>
+            <button class="right">등록하기</button>
+        </div>
+    </div>
+
+
+    <style>
+        .wrap-control { overflow: hidden;}
+        .p-left {float: left; padding-left: 60px;}
+        .p-right {float: right;}
+        p {padding: 0; margin: 0;}
+    </style>
+
+    <div class="wrap">
+        <div class="wrap-img">
+            <img src="img/bgimg.png">
+        </div>
+        <div class="wrap-control">
+            <div class="p-left">
+                <p><strong>제목</strong></p>
+                <p><small>내용</small></p>
+            </div>
+            <button class="p-right">삭제</button>
+            <button class="p-right">수정</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        ul, li { list-style: none; }
+        body { height: 1000px;}
+
+        header { 
+            position: fixed; /* 스크롤에 고정 */
+            width: 100%;
+            left: 0px;
+            top: 0px;
+
+            /* 포지션이 겹치는 경우 z-index 값으로 z축의 위치를 결정 */
+            z-index: 50; /* 숫자가 커질 수록 가장 위에 표시된다 */
+        }
+        section {
+            margin-top: 170px;
+        }
+        .logo { 
+            text-align: center; 
+            background-color: #fff;
+        }
+        .menu {
+            background-color: #000;
+            text-align: center;
+        }
+        .menu > li { 
+            display: inline-block;}
+        .menu > li > a {
+            display: block;
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+        }
+        .menu > li > a:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo"><!-- 이미지영역 -->
+            <img src="img/bgimg.png">
+        </div>
+        <nav><!-- 메뉴영역 -->
+            <ul class="menu">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        .......................
+    </section>
+
+
+    <style>
+        /* 사이드바 */
+        .side {
+            text-align: center;
+            position: fixed;
+            right: 0px;
+            top: 200px;
+            z-index: 30;
+        }
+        .side-list li a {
+            display: block;
+            padding: 20px;
+            background-color: #282828;
+            text-decoration: none;
+            color: white;
+            font-size: 0.7em;
+            border-top: 1px solid #777;
+            letter-spacing: -1px; /* 자간 */
+        }
+    </style>
+
+    <aside class="side">
+        <ul class="side-list">
+            <li>
+                <a href="#">
+                    <p>카톡</p>
+                    <p>asdf123</p>
+                </a>
+            </li>
+            <li><a href="#">전화번호</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">메뉴</a></li>
+        </ul>
+    </aside>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        section {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 500px;
+            background-color: royalblue;
+        }
+        .box {
+            position: relative;
+            float: left;
+            width: 25.0000%;
+            height: 200px;
+            background-color: darkseagreen;
+
+        }
+        /* box, section에 position: relative를 넣어서 결과를 확인해보자. 부모요소들 중에 relative가 없다면 body가 기준이 된다 */
+        .pos {
+            background-color: pink;
+            position: absolute; /* 부모요소 기준으로 z축으로 올린다 */
+            right: 0px;
+            bottom: 0px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section>
+        <div class="box">박스1</div>
+        <div class="box">박스1</div>
+        <div class="box">박스1</div>
+        <div class="box">
+            박스1
+            <div class="pos">포지션</div>
+        </div>
+    </section>
+
+</body>
+</html>
