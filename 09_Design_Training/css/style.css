@@ -1,8 +1,7 @@
 /* https://ncs.go.kr/index.do */
 
 /* 1. 웹 폰트 선언 */
-@import url('https://fonts.googleapis.com/css2?family=Stylish&family=Sunflower:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 /* 2. 디자인 시작시 기본 선언 */
 * {
     padding: 0;
@@ -10,7 +9,7 @@
     box-sizing: border-box;
 }
 body, html {
-    font-family: 'Stylish', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     width: 100%;
     min-width: 320px; /* 모바일 환경을 고려해서, 가장 작은 최소 크기. 적용될 일이 많지는 않다. */
 }
@@ -140,14 +139,20 @@ ul, li, dl, ol {
 
 
 /* -------------------------헤더2 디자인------------------------- */
+.navbar {
+    margin: 0px;
+}
+/* 배경색 */
 .custome_header {
     background-color: #263238;
 }
 
+/* a태그 색상 */
 .custome_header nav a {
     color: white;
 }
 
+/* 이미지 위치 조정 */
 .navbar-brand {
     padding: 10px 15px;
 }
@@ -172,4 +177,37 @@ ul, li, dl, ol {
     .dropdown-menu > li > a {
         color: #eee;
     }
+}
+
+
+/* -------------------------footer------------------------- */
+footer {
+    background-color: #263238;
+    color: #eee;
+    padding: 40px 0;
+}
+footer .copyright {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+footer .footer-menu > li {
+    display: inline-block;
+}
+footer .footer-menu > li > a {
+    display: block;
+    color: #eee;
+    padding: 0 15px;
+}
+
+/* -------------------------index(main)------------------------- */
+/* ====== 슬라이더 영역 ====== */
+.slider-list {
+    padding: 0px;
+}
+
+/* 슬라이드 이동 화살표 영역 그라데이션 삭제 */
+.carousel-control.right,
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%);
 }
