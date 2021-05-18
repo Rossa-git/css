@@ -1,0 +1,130 @@
+/* https://ncs.go.kr/index.do */
+
+/* 1. 웹 폰트 선언 */
+@import url('https://fonts.googleapis.com/css2?family=Stylish&family=Sunflower:wght@500&display=swap');
+
+/* 2. 디자인 시작시 기본 선언 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: 'Stylish', sans-serif;
+    width: 100%;
+    min-width: 320px; /* 모바일 환경을 고려해서, 가장 작은 최소 크기. 적용될 일이 많지는 않다. */
+}
+img {
+    max-width: 100%; /* 사이즈가 변했을 때 넓이 유지 */
+    height: auto; /* 가로 길이에 맞춰 높이는 자동으로 변경 */
+}
+input, textarea, button, select { 
+    /* 
+        브라우저별로 고유하게 적용되는 form관련 요소들의 css제거 
+        크로스 브라우징을 위해 필요하다.
+
+        9년전 글이지만 아주 유용하다.
+        https://dolly77.tistory.com/9
+    */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-apperence: none;
+}
+ul, li, dl, ol {
+    list-style: none; /* 순서 요소들의 리스트 스타일 제거 */
+}
+
+/* -------------------------위쪽 헤더------------------------- */
+.header_col1 {
+    background-color: #eee;
+    overflow: hidden;
+    height: 52px;
+    line-height: 52px;
+}
+
+.top_width > ul > li.on {
+    /* 선택자를 붙여서 사용하면, li 태그 안의 클래스가 on인 요소를 선택 */
+    border-top: 1px solid #d2d0d0;
+    line-height: 42px;
+    border-left: 1px solid #d2d0d0;
+    border-right: 1px solid #d2d0d0;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    font-weight: 500;
+
+    border-bottom: 5px solid #037fc3;
+}
+
+.top_width > ul > li {
+    display: inline-block;
+    width: 135px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.top_width > ul > li > a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+}
+
+.top_width { 
+    overflow: hidden;
+    width: 1240px;
+    margin: 0 auto;
+}
+.fl_left { float: left;}
+.fl_right { float: right;}
+
+.fl_right > a {
+    text-decoration: none;
+    background-color: #fff;
+    color: #666;
+    padding: 7px;
+    border: 1px solid #d0d0d0
+}
+
+
+/* -------------------------아래쪽 헤더------------------------- */
+.top_hide {
+    display: none;
+}
+
+.logo {
+    float: left; /* 부모 요소(top_width)에 overflow:hidden */
+}
+
+.logo a {
+    display: block;
+    background-image: url("../img/logo.png");
+    width: 200px;
+    height: 33px;
+    margin: 23px 0 0; /* 위, 왼쪽, 아래 */
+    background-repeat: no-repeat;
+}
+
+.top_menu {
+    float: left;
+    margin-left: 30px;
+}
+
+.top_menu > ul > li {
+    display: inline-block;
+}
+
+.top_menu > ul > li > a {
+    /* a 태그에 넓이 설정을 해주는 이유는 마우스 클릭이 가능하도록 하기 위해서 */
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 5px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+}
+
+.top_menu > ul > li > a:hover {
+    color: #39f;
+}
