@@ -34,6 +34,15 @@ ul, li, dl, ol {
     list-style: none; /* 순서 요소들의 리스트 스타일 제거 */
 }
 
+/* 버튼과 input태그의 윤곽 변경  */
+.btn {
+    border-radius: 0px;
+}
+.form-control {
+    border-radius: 0px;
+}
+
+
 /* -------------------------위쪽 헤더------------------------- */
 .header_col1 {
     background-color: #eee;
@@ -127,4 +136,40 @@ ul, li, dl, ol {
 
 .top_menu > ul > li > a:hover {
     color: #39f;
+}
+
+
+/* -------------------------헤더2 디자인------------------------- */
+.custome_header {
+    background-color: #263238;
+}
+
+.custome_header nav a {
+    color: white;
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+/* 마우스 호버, 포커스 시 백그라운드 색상변경 */
+.custome_header .nav > li > a:hover,
+.custome_header .nav > li > a:focus {
+    background-color: #304047;
+}
+
+/* 모바일환경에서 메뉴 윤곽선 */
+.custome_header .navbar-toggle,
+.custome_header .navbar-toggle .icon-bar {
+    color: #aaa;
+    border: 1px solid #aaa;
+}
+
+.dropdown-menu > li > a {
+    color: #333;
+}
+@media(max-width: 767px) {
+    .dropdown-menu > li > a {
+        color: #eee;
+    }
 }
