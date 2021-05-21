@@ -10,6 +10,9 @@
 }
 
 /* 상품영역 */
+.prod-list {
+    margin-bottom: 10px;
+}
 .prod-content {
     overflow: hidden;
     padding: 15px 0;
@@ -31,3 +34,21 @@
 
 /* 숙제! 이미지영역의 margin-top의 값을 위로*/
 /* transition에 대한 내용을 확인 */
+
+.prod-list > .prod-color {
+    margin-top: -40px;
+    opacity: 0;
+    
+    /* 변화시킬 css, 시간, transition 속성, 지연시간 */
+    transition: all 0.5s ease-in-out;
+    /* 
+        all : 모든 속성에 대해
+        linear : 일정하게 
+
+        개발자도구의 [애니메이션]탭을 참고해보자.
+    */
+}
+
+.prod-list:hover > .prod-color {
+    opacity: 1;
+}
