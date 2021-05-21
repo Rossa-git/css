@@ -1,0 +1,107 @@
+/* 제품 상세 영역 */
+.detail-info {
+    min-height: 345px;
+    /* margin-bottom: 135px; */
+}
+
+.detail-info > .title {
+    font-size: 24px;
+}
+
+.detail-info > p.price {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.detail-info > .delivery {
+    color: #888;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.detail-btn > .price,
+.detail-btn > .order {
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-btn > .price {
+    margin: 0;
+}
+
+.detail-btn > .price > .left {
+    font-size: 18px;
+}
+
+.detail-btn > .price > .right {
+    font-size: 30px;
+}
+
+.order > .btn {
+    width: 50% ;
+    height: 60px;
+}
+
+
+/* 댓글영역 */
+.reply-wrap {
+    background-color: #eee;
+    border: 1px solid #ccc ;
+    position: relative;
+    padding: 15px 15px 15px 15px;
+}
+.reply-img {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.reply-content {
+    padding-left: 55px;
+}
+
+.reply-content > textarea {
+    height: 80px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.reply-content > textarea:focus {
+    height: 150px;
+    transition: height 0.3s;
+}
+
+.reply-group {
+    overflow: hidden;
+}
+
+.reply-input {
+    width: 200px;
+}
+
+.reply-input > input {
+    margin-bottom: 5px;
+}
+
+/* 댓글 영역 */
+.reply-group > a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    float: right;
+}
+
+.reply-group > small {
+    margin-left: 5px;
+    height: 20px;
+    line-height: 20px;
+}
