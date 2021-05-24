@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩 css파일 참조 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- 부트스트랩 js를 사용하기 위해 jquery 라이브러리 참조. 순서 매우 중요. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- 부트스트랩 js참조, js파일 순서 중요-->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- 개인 커스텀디자인은 가장 아래쪽에 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 이미지 게시판 디자인 -->
+    <link rel="stylesheet" href="css/board.css">
+    <!-- 게시판 상세 디자인 -->
+    <link rel="stylesheet" href="css/board_detail.css">
+    <!-- 회원가입 or 로그인 -->
+    <link rel="stylesheet" href="css/join.css">
+    <!-- 탭 -->
+    <link rel="stylesheet" href="css/tap.css">
+    <!-- 마이페이지 디자인 -->
+    <link rel="stylesheet" href="css/mypage.css">
+    <!-- 페이스북 디자인 -->
+    <link rel="stylesheet" href="css/facebook.css">
+</head>
+<body>
+    <header class="custome_header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"> <!-- 로고 영역 -->
+                        <img src="img/logo.svg" width="30">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">메인</a></li>
+                        <li><a href="#">예약</a></li>
+                        <li><a href="#">Q&A</a></li>
+                    </ul>
+                    
+                    <!-- 우측 회원메뉴 -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">회원 메뉴<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+                        </li> 
+                    </ul>
+
+                    <!-- 검색버튼(우측배치 navbar-right) -->
+                    <form class="navbar-form navbar-right" action="/action_page.php">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="검색하기" name="search">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                              <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section style="margin-top: 70px;">
+        <div class="container">
+            <div class="row">
+                <aside class="col-sm-3 aside-facebook">
+                    <div class="aside-facebook-wrap-left">
+                        <div class="aside-profile"> <!-- 프로필사진, 닉네임 -->
+                            <img class="facebook-profile-img" src="img/profile.png">
+                            <strong>박유진</strong>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>뉴스피드</li>
+                                <li>메신저</li>
+                                <li>watch 동영상</li>
+                            </ul>
+                            <p>둘러보기</p>
+                            <ul>
+                                <li>기부 캠페인</li>
+                                <li>페이지</li>
+                                <li>그룹</li>
+                                <li>이벤트</li>
+                                <li>친구리스트</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="col-sm-7 section-facebook">
+                    <div class="facebook-input-wrap"> <!-- 게시글 등록 영역 -->
+                        <div class="facebook-input-content">
+                            <h4>게시글을 등록하세요</h4>
+                            <textarea class="form-control" rows="2"></textarea>
+                        </div>
+                        <div class="facebook-input-button">
+                            <button class="btn btn-success imgUpload">이미지업로드</button>
+                            <button class="btn btn-info submit">등록하기</button>
+                        </div>
+                    </div>
+
+                    <div class="facebook-board-wrap"> <!-- 게시글이 보여지는 영역  -->
+                        <div class="facebook-board-box"> <!-- 게시글 한 개의 박스 -->
+                            <div class="title"> <!-- 프로필이미지, 이름, 작성시간 -->
+                                <img class="facebook-profile-img" src="img/profile.png">
+                                <p>테스트</p>
+                                <small>21시간전</small>
+                            </div>
+                            <div class="content-inner"> <!-- 본문영역 -->
+                                <p>삶이 우리를 끝없이 시험하기에 고어텍스는 한계를 테스트합니다</p>
+                            </div>
+                            <div> <!-- 첨부한 이미지 -->
+                                <img src="img/facebook.jpg">
+                            </div>
+                            <div class="facebook-like"> <!-- 좋아요, 댓글, 공유 회수 영역 -->
+                                <img src="img/like.png">
+                                <span>522</span>
+                            </div>
+                            <div class="button-group"> <!-- 좋아요, 댓글, 공유 버튼영역 -->
+                                <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span> 좋아요</a>
+                                <a href="#"><span class="glyphicon glyphicon-comment"></span> 댓글달기</a>
+                                <a href="#"><span class="glyphicon glyphicon-share-alt"></span> 공유하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="col-sm-2 aside-facebook">
+                    <div class="aside-facebook-wrap-right">
+                        <p>목록</p>
+                        <ul>
+                            <li>목록1</li>
+                            <li>목록2</li>
+                            <li>목록3</li>
+                            <li>목록4</li>
+                            <li>목록5</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-12">
+                    <div class="copyright">
+                        <a href=""><img src="img/logo.svg" width="20"></a>
+                        BrandName | 대표자 : 홍길동 | E-MAIL : OOOOOOO@OOOOO.com<br/>
+                        개인정보보호책임자 : 홍길동 | 이곳은 카피라이트 영역<br/>
+                        주소 : 우리은하 지구별<br/>
+                        <address>©Bootstrap. ALL RIGHTS RESERVED</address>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <ul class="footer-menu">
+                        <li><a href="">고객센터</a></li>
+                        <li><a href="">유용한 정보</a></li>
+                        <li><a href="">개인정보취급방침</a></li>
+                        <li><a href="">Q&A</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>

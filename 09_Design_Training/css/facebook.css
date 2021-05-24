@@ -1,0 +1,102 @@
+@media(max-width:767px) {
+    .aside-facebook { 
+        display: none; 
+    }
+}
+
+/* aside 왼쪽 */
+.aside-profile {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+}
+.facebook-profile-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.aside-profile > strong {
+    margin-left: 50px;
+}
+
+
+/* section-facebook */
+    /* 게시글 등록 영역 */
+.section-facebook {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.facebook-input-wrap {
+    margin-bottom: 20px;
+}
+.facebook-input-content {
+    margin-bottom: 10px;
+}
+.facebook-input-content > textarea {
+    resize: vertical;
+    height: 80px;
+}
+.facebook-input-content > textarea:focus {
+    transition: 0.5s height;
+    height: 150px;
+}
+
+.facebook-input-button {
+    position: relative;
+    overflow: hidden;
+}
+.facebook-input-button > .imgUpload {
+    float: left;
+}
+.facebook-input-button > .submit {
+    float: right;
+}
+
+    /* 게시글 보여지는 영역 */
+    /* title */
+.facebook-board-box > .title {
+    position: relative;
+}
+.facebook-board-box > .title > p,
+.facebook-board-box > .title > small {
+    margin: 0px;
+    padding-left: 50px;
+}
+
+    /* content-inner 본문영역 */
+.facebook-board-box > .content-inner {
+    padding: 10px 0;
+}
+
+    /* 좋아요 수 */
+.facebook-like {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 3px 0;
+}
+.facebook-like > span{
+    vertical-align: middle;
+}
+.facebook-like > img {
+    width: 30px;
+}
+
+    /* 좋아요, 댓글, 공유 버튼 */
+.facebook-board-box > .button-group {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.facebook-board-box > .button-group > a {
+    display: block;
+    width: 33.3333%;
+    text-align: center;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+
+    color: #333;
+}

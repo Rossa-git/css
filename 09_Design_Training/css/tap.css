@@ -1,0 +1,47 @@
+/* 토클탭 디자인 */
+.tabs-basic > li {
+    width: 25%;
+    text-align: center;
+}
+
+.tabs-basic > li > a {
+    color: #555;
+    margin-right: 0px;
+}
+
+.tabs-basic > li > a:hover {
+    background-color: #dddddd;
+}
+
+/* 토글탭 디자인2 */
+
+.tabs-style {
+    margin: 0 auto;
+    float: none;
+}
+        /* 선택되어 있는 a */
+.tabs-style li.active a,
+.tabs-style li.active a:hover,
+.tabs-style li.active a:focus,
+.tabs-style li.active a:active {
+    background-color: #456270;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+        /* 선택되어있지 않은 */
+.tabs-style li > a {
+    background-color: #81949e;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.tabs-style li > a:hover,
+.tabs-style li > a:focus,
+.tabs-style li > a:active {
+    background-color: #456270;
+}
