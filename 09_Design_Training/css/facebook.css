@@ -27,12 +27,14 @@
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
 }
-
 .facebook-input-wrap {
     margin-bottom: 20px;
 }
 .facebook-input-content {
     margin-bottom: 10px;
+}
+.section-facebook .fileDiv {
+    display: none;
 }
 .facebook-input-content > textarea {
     resize: vertical;
@@ -65,6 +67,9 @@
     padding-left: 50px;
 }
 
+.facebook-board-box > .image-inner > img {
+    width: 100%
+}
     /* content-inner 본문영역 */
 .facebook-board-box > .content-inner {
     padding: 10px 0;
@@ -85,12 +90,12 @@
 }
 
     /* 좋아요, 댓글, 공유 버튼 */
-.facebook-board-box > .button-group {
+.facebook-board-box > .button-inner {
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid #ccc;
 }
-.facebook-board-box > .button-group > a {
+.facebook-board-box > .button-inner > a {
     display: block;
     width: 33.3333%;
     text-align: center;
@@ -99,4 +104,7 @@
     line-height: 35px;
 
     color: #333;
+}
+.facebook-board-box > .button-inner i {
+    margin-right: 5px
 }
