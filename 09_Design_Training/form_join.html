@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/board_detail.css">
     <!-- 회원가입 or 로그인 -->
     <link rel="stylesheet" href="css/join.css">
+
+    
 </head>
 <body>
 
@@ -80,24 +82,27 @@
                     <div class="titlebox">
                         회원가입
                     </div>
-                    <form>
+                    <form name="form">
                         <div class="form-group">
                             <label>아이디</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="아이디는 영문(4~12)글자" name="">
+                                <input type="text" class="form-control" placeholder="아이디는 영문(4~12)글자" id="id" name="id">
                                 <div class="input-group-btn">
                                     <button class="btn btn-primary" type="button">아이디중복체크</button>
                                 </div>
                             </div>
+                            <span class="idCheck"></span>
                         </div>
 
                         <div class="form-group">
                             <label>비밀번호</label>
-                            <input type="password" class="form-control" placeholder="비밀번호(영 대/소문자, 숫자조합 8~16)" name="">
+                            <input type="password" class="form-control" placeholder="비밀번호(영 대/소문자, 숫자조합 8~16)" id="pw" name="id">
+                            <span class="pwCheck"></span>
                         </div>
                         <div class="form-group">
                             <label>비밀번호확인</label>
-                            <input type="password" class="form-control" placeholder="비밀번호를 확인하세요" name="">
+                            <input type="password" class="form-control" placeholder="비밀번호를 확인하세요" id="pwc" name="id">
+                            <span class="pwcCheck"></span>
                         </div>
 
                         <div class="form-group">
@@ -165,5 +170,70 @@
 
     </footer>
     
+
+    <script>
+        var id = document.form.id;
+        var idCheck = document.querySelector(".idCheck");
+        id.oninput = function() {
+            /* js의 정규표현식은 정규표현식.test(식별할값); return 값은 boolean형이다 */
+            var regex = /^[a-zA-Z0-9]{4,12}$/;
+            if(!regex.text(id.vale)) {
+                id.style.borderColor = "red"
+                idCheck.innerHTML = "사용할 수 없는 아이디입니다"
+            } else {
+                id.style.borderColor = "green";
+                idCheck.innerHTML = "사용 가능합니다"
+            }
+            /*
+            if(id.value.length >= 4 && id.value.length <= 12) {
+                id.style.borderColor = "green";
+                idCheck.innerHTML = "사용 가능합니다"
+            } else {
+                id.style.borderColor = "red"
+                idCheck.innerHTML = "사용할 수 없는 아이디입니다"
+            }
+            */
+        }
+
+        var pw = document.form.pw;
+        var pwCheck = document.querySelector(".pwCheck");
+        pw.oninput = function() {
+            /*
+            var test1 = /[a-z]/.test(pw.value);
+            var test2 = /[A-Z]/.test(pw.value);
+            var test3 = /[0-9]/.test(pw.value);
+
+            if(pw.value.length >= 8 && pw.value.length <= 16 && ((test1 || test2) && test3)) {
+                pw.style.borderColor = "green";
+                pwCheck.innerHTML = "사용 가능합니다"
+            } else {
+                pw.style.borderColor = "red";
+                pwCheck.innerHTML = "사용할 수 없는 비밀번호입니다"
+            }
+            */
+            
+            var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/;
+            if(!regex.test(pw.vale)) {
+                pw.style.borderColor = "red";
+                pwCheck.innerHTML = "사용할 수 없는 비밀번호입니다"  ;
+            } else {
+                pw.style.borderColor = "green";
+                pwCheck.innerHTML = "사용 가능합니다";
+            }
+        }
+
+        var pwc = document.form.pwc;
+        var pwcCheck = document.querySelector(".pwcCheck");
+
+        pwc.oninput = function() {
+            if(pw.value == pwc.value) {
+                pwc.style.borderColor = "green";
+                pwcCheck.innerHTML = "비밀번호가 일치합니다";
+            } else {
+                pwc.style.borderColor = "red";
+                pwcCheck.innerHTML = "비밀번호가 일치하지 않습니다";
+            }
+        }
+    </script>
 </body>
 </html>
